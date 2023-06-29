@@ -2,10 +2,10 @@ var exp = require('express')
 var app = exp()
 var bp = require('body-parser')
 app.use(bp.urlencoded({ extended: true }))
-app.use(exp.static('public'))
+
 
 app.get('/getform', function (req, res) {
-    res.sendFile(__dirname + "/public/LoginForm.html")
+    res.sendFile(__dirname + "/LoginForm.html")
 })
 app.post('/getDataTable', function (req, res) {
     var a = req.body.name;
